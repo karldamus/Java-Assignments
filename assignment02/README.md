@@ -1,6 +1,9 @@
 # Assignment #2
 ## Temperature.java
-This class converts a temperature object between Celsius, Fahrenheit, and Kelvin. All scales are ENUM values (see Scale.java).
+This class converts a temperature object between Celsius, Fahrenheit, and Kelvin. 
+
+All scales are ENUM values (see Scale.java).
+
 The testing program for this class can be found [here](https://github.com/karldamus/java-assignments/blob/main/assignment02/DefaultTestFiles/SimpleTemperatureProgram.java).
 Sample output here:
 ```java
