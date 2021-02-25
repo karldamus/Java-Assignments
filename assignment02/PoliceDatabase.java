@@ -4,12 +4,6 @@
  * ©2021, All Rights Reserved
  *****************************/
 
-/**
- * TODO:
- * ----------
- * * Solve error messages from PoliceDatabaseTestProgram + 2
- */
-
 import java.util.Date;
 
 public class PoliceDatabase {
