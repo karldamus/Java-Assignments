@@ -53,3 +53,7 @@ System.out.println(">> t.getScale() -> " + t.getScale());    	// outputs Scale.F
 	* “$100.00 Infraction on Sun Jul 14 07:08:00 EDT 2002 [PAID IN FULL]” 
 * If the infraction has been paid, it should state [PAID IN FULL] as shown above, otherwise it should state [OUTSTANDING]. 
 * a method called pay() which pays the infraction
+- - -
+```
+Grade: 100%
+```
