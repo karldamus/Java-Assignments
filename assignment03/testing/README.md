@@ -1,4 +1,4 @@
-## PolicyTester
+#### PolicyTester
 ```
 Policy: 0001 amount: $320.00
 DepreciatingPolicy: 0002 amount: $500.10 rate: 10.0%
@@ -10,7 +10,7 @@ ExpiringPolicy: 0005 amount: $2000.00 expired on: April 01, 2013 (11:59 P.M.)
 true
 ```
 
-## ClientTester
+#### ClientTester
 ```
 Here are the Individual Client's policies:
   Policy: 0001 amount: $100.00
