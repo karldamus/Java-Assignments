@@ -1,0 +1,105 @@
+# Assignment 4 
+## Sorting.txt
+---
+for the following tests:
+all the suits are removed because they are all diamonds and therefore redundant, regardless of which compareTo method is called.
+the compareTo method will be denoted .() e.g., 9.(A) == 9.compareTo(A)
+
+
+(A) uses version 1, all cards are of type OtherCard
+
+i=1;	Q 9 J A		Q.(9) = 1; swap
+i=2;	9 Q J A		Q.(J) = 0;
+i=3; 	9 Q J A		J.(A) = 1; swap
+i=1;	9 Q A J		9.(Q) = -1;
+i=2; 	9 Q A J		Q.(A) = 1; swap
+i=3; 	9 A Q J		Q.(J) = 0;
+i=1; 	9 A Q J		9.(A) = 1; swap;
+i=2; 	A 9 Q J		9.(Q) = -1;
+i=3;	A 9 Q J 	Q.(J) = 0;
+i=1; 	A 9 Q J		A.(9) = -1;
+i=2; 	A 9 Q J		9.(Q) = -1;
+i=3; 	A 9 Q J		Q.(J) = 0;
+
+finished, no swaps were made this time through
+therefore the output is as follows:
+
+[QD, 9D, JD, AD]
+[9D, QD, AD, JD]
+[9D, AD, QD, JD]
+[AD, 9D, QD, JD]
+
+
+
+(B) uses version 1 ... Q & A = OtherCard; J & 9 = Card
+
+i=1;	Q 9 J A		Q.(9) = 1; swap
+i=2;	9 Q J A		Q.(J) = 0; 
+i=3;	9 Q J A		J.(A) = -1; 
+
+continue because a swap was made
+i=1;	9 Q J A		9.(Q) = -1; 
+i=2;	9 Q J A		Q.(J) = -1; 
+i=3;	9 Q J A		J.(Q) = -1; 
+
+finished, no swaps were made this time through
+therefore the output is as follows:
+
+[QD, 9D, JD, AD]
+[9D, QD, JD, AD]
+
+
+(C)
+For this test let the following be true:
+	* OC = OtherCard
+	* C = Card
+	* the suits will be removed (ignored) as they are all off the same suit
+	* “.” will stand in for .compareTo … e.g., A.(Q) => AD
+	* the letter “i” will represent the counter in the pseudocode; displayed in the assignment specification
+Therefore, the starting cards are as follows:
+	* OC(Q)
+	* C(9)
+	* C(J) 
+	* OC(A)
+Remember we are looking for a value less than 0 when comparing [i] to [i-1]
+
+i=1; 	Q, 9, J, A  		9.(Q) = -1, swap
+i=2; 	9, Q, J, A		J.(Q) = -1, swap
+i=3; 	9, J, Q, A		A.(Q) = -1, swap
+we continue because at least on swap was made
+i=1;	9, J, A, Q		J.(9) = 1 
+i=2;	9, J, A, Q		A.(J) = -1, swap
+i=3;	9, A, J, Q		Q.(J) = 0
+continue;
+i=1;	9, A, J, Q		A.(9) = -1, swap
+i=2;	A, 9, J, Q		J.(9) = 1
+i=3;	A, 9, J, Q		Q.(J) = 0
+continue;
+i=1;	A, 9, J, Q		9.(A) = -1, swap
+i=2; 	9, A, J, Q		J.(A) = -1, swap
+i=3;	9, J, A, Q		Q.(A) = 1
+continue;
+i=1; 	9, J, A, Q		REPEATED, see below
+
+Therefore the output would be as follows
+
+Q, 9, J, A  		
+9, Q, J, A		
+9, J, Q, A		
+9, J, A, Q			
+9, A, J, Q				
+A, 9, J, Q						
+9, A, J, Q		
+9, J, A, Q				
+. . . . . .
+
+
+Notice that the last line is the exact same as the fourth line. This clearly shows that the swap will never “be complete”. It will loop from line 4 to the last, infinitely. 
+The reason behind this is because of the way that the compareTo methods are being called. Depending on which value comes first (an OtherCard or a Card) the compareTo method will result in a different compareTo method being called. As a result, the rankings will change based on which method is called.
+
+### Conclusion
+In conclusion, we must take care when using multiple classes that override the compareTo() method in different ways. We must take care because we may want, or accidentally compare two different type objects of objects which could skew the result. Take the following example.
+	Q.compareTo(J) | Q is an OtherCard, therefore it is “equal” to Jack and the return value is 0.
+	J.compareTo(Q) | J is a Card, therefore it is “less than” Queen and the return value is -1.
+
+Two of the same cards, compared to each other … but the result is different. This could be quite an issue when working on a large piece of software. 
