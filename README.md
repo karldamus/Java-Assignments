@@ -1,7 +1,7 @@
 # java-assignments
 Java assignments from Computer Science II
 
-Average grade of all 5 assignments: 94.68%
+Average grade: **94.68%**
 
 - [Assignment 1](https://github.com/karldamus/java-assignments/tree/main/assignment01) (100%):
   - Finding values in byte[][]'s
