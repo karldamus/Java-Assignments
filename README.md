@@ -28,7 +28,7 @@ Java assignments from Computer Science II
 
 - [Assignment 5](https://github.com/karldamus/java-assignments/tree/main/assignment05) (100%):
   - Working with Binary Tree's and Binary Search Tree's
-  - Implementation of to `contains()` methods (with and without recursion)
+  - Implementation of two `contains()` methods (with and without recursion)
   - Checking to see if a given tree is a Binary Search Tree
   - Adding to a Binary Search Tree
   - Optimizing the size of a Binary Search Tree whilst remaining a valid BST
