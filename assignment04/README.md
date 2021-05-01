@@ -1,34 +1,16 @@
-# Assignment #3
-## Policies
-This set of classes follows the following hierarchy:
+# Assignment #4
+## Goal
+By overriding the compareTo() method, we must compare and sort a set of cards based on the following hierarchy (such that *iff* the suits are the same, then the ranks matter):
+- diamonds < clubs < hearts < spades
+- 2 < 3 < ... < 9 < 10 < Jack < King < Queen < Ace
+- note that a joker has SUIT.NONE
 
-![Policies Hierarchy](https://github.com/karldamus/java-assignments/blob/main/assignment03/github/policies.jpg)
+The solution I created solved the ranking of the cards and their 'compareTo' values all-in-one. By ordering the suits and ranks in an array, I was able to compare two cards to each other by testing if their position in the array was greater or lower than the other.
 
-### Policy
-This class is simple, it creates a policy with a dedicated policy number and assigned $ amount.
-
-### DepreciatingPolicy
-This is a subclass of Policy which depreciates at a given `float rate`.
-
-### ExpiringPolicy
-This is a subclass of Policy which expires on a given `Date date`
-
-## Clients
-This set of classes follows the following hierarchy:
-
-![Clients Hierarchy](https://github.com/karldamus/java-assignments/blob/main/assignment03/github/clients.jpg)
-
-### Client
-This class is used to hold policies for a single client. The most policies on client can have is 10.
-
-### IndividualClient
-This class creates claims for individuals.
-### CompanyClient
-This class creates claims for companies.
 - - -
-Testing files can be found [here](https://github.com/karldamus/java-assignments/tree/main/assignment03/testing).
+Testing files can be found [here](https://github.com/karldamus/java-assignments/tree/main/assignment04/testing).
 
 - - -
 ```
-Grade: 82%
+Grade: 91.4%
 ```
