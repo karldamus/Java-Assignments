@@ -1,5 +1,6 @@
 # Assignment #5
-## Methods to Implement:
+For this assignment, we had to implement the following methods in the corresponding classes:
+
 **Binary Tree class:**
 ```java
 public boolean contains(String s)
